@@ -1,0 +1,66 @@
+.recentSec {
+    margin: 7% 0;
+    overflow: hidden;
+
+    .recentCont {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+
+        .recentTitle {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .rTitleCont {
+                display: flex;
+                align-items: center;
+                gap: 3vw;
+                margin-right: 5%;
+
+                h3 {
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 50px;
+                    letter-spacing: 0.03em;
+                    background: linear-gradient(295.38deg, #ffe5a2 4.89%, #bf841a 50.44%, #ffcd74 95.06%);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    text-fill-color: transparent;
+
+                    @media (min-width: 320px) {
+                        font-size: calc(1rem + ((1vw - 3.2px) * 1.7045));
+                        min-height: 0vw;
+                    }
+                }
+
+                .vline {
+                    width: 1px;
+                    align-self: stretch;
+                    background: linear-gradient(295.38deg, #ffe5a2 4.89%, #bf841a 50.44%, #ffcd74 95.06%);
+                }
+
+                .rlink {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 50px;
+                    letter-spacing: 0.03em;
+                    color: rgba($color: var(--title-color), $alpha: 0.8);
+
+                    @media (min-width: 320px) {
+                          font-size: calc(0.5rem + ((1vw - 3.2px) * 1.1364));
+                          min-height: 0vw;
+                      }
+                }
+            }
+        }
+
+        .recentCarousel {
+            display: flex;
+            gap: 79px;
+            align-items: center;
+            margin-left: 7%;
+        }
+    }
+}

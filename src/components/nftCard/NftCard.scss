@@ -1,0 +1,20 @@
+.nftCard {
+    position: relative;
+
+    & img {
+        display: block;
+    }
+
+    .nftAbsolute {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: var(--nft-text);
+        background: var(--nft-text-bg);
+        padding: 7px 20px;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 50px;
+        letter-spacing: 0.035em;
+    }
+}

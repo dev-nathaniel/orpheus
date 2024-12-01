@@ -1,0 +1,118 @@
+.navBar {
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--background-color);
+}
+
+.navCont {
+    padding: 1.5% 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .leftNav {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-family: 'Cinzel', serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 27px;
+        cursor: pointer;
+    }
+
+    .rightNav {
+        display: flex;
+        align-items: center;
+        gap: 33px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+
+        @media screen and (max-width: 767px) {
+            .navLink {
+                display: none;
+            }
+        }
+
+        .navMenu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+
+            @media screen and (max-width: 767px) {
+                display: block;
+            }
+            div {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 6;
+                padding: 1.5rem 1rem;
+                padding-right: 3rem;
+                width: 80%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--background-color);
+                box-shadow: 0 0 20px rgba(40, 40, 40, 0.15);
+
+                .closeButton {
+                    align-self: flex-end;
+                    margin-bottom: 40px;
+                }
+
+                a {
+                    margin: 1rem;
+                    align-self: flex-start;
+                }
+            }
+        }
+
+        & p {
+            position: relative; 
+        }
+
+        & p::before {
+            width: 100%;
+            top: 100%;
+            margin-top: 5px;
+            height: 3px;
+            content: "";
+            transform: scaleX(0);
+            transform-origin: right;
+            background: linear-gradient(295.38deg, #ffe5a2 4.89%, #bf841a 50.44%, #ffcd74 95.06%);
+            position: absolute;
+            transition: transform 0.3s;
+        }        
+
+        & a:hover p::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(105%);
+    }
+}
+
+
